@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700&display=swap');
+
+:root {
+    --main-color: #e74c3c;
+    --dark-bg: #1a1a1a;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(90deg, #1a1a1a, #c0392b);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    background: url('images/porsh.avif') center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+nav {
+    background: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--main-color);
+    transform: scale(1.1);
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    min-height: 60vh;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: rotate(1deg);
+}
+
+.glass-box {
+    background: rgba(44, 62, 80, 0.8);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+@keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-content {
+    animation: fadeInScale 1.2s ease-in-out;
+}
+
+.animate-btn {
+    animation: pulse 2s infinite;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (min-width: 1600px) {
+    main { max-width: 1500px; }
+    body { font-size: 18px; }
+}
+
+@media (max-width: 1366px) {
+    main { padding: 15px; }
+}
+
+@media (max-width: 768px) {
+    nav ul { flex-direction: column; text-align: center; }
+    header h1 { font-size: 1.8rem; }
+    .card { margin: 10px; }
+}
