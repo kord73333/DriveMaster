@@ -30,7 +30,7 @@ header {
 header h1 {
     font-size: 3rem;
     text-transform: uppercase;
-    background: url('images/porsh.avif') center;
+    background: url('porsh.avif') center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
